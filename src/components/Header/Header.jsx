@@ -4,10 +4,11 @@ import Navbar from 'react-bootstrap/Navbar';
 
 const Header = () => {
     return (
+        // Navbar Section
         <div>
             <Navbar>
                 <Container>
-                    <Navbar.Brand href="#home"><h2>Knowledge Station</h2></Navbar.Brand>
+                    <Navbar.Brand href="#home"><h2>Knowledge <span className='text-success'>Station</span></h2></Navbar.Brand>
                     <Navbar.Toggle />
                     <Navbar.Collapse className="justify-content-end">
                         <Navbar.Text>
