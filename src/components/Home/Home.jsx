@@ -1,13 +1,24 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Blog from '../Blog/Blog';
 
 const Home = () => {
+    const [blogs, setBlogs] = useState([]);
+    useEffect(() => {
+        fetch('blogs.json')
+        .then(res => res.json())
+        .then(data => setBlogs(data))
+    },[])
     return (
         <div className='main row py-5'>
 
             {/* Blog Section */}
             <div className="blog-container col-md-8">
-                <Blog></Blog>
+                {
+                    blogs.map(blog => <Blog 
+                        key = {blog.id}
+                        blog={blog}
+                    ></Blog>)
+                }
             </div>
 
             {/* Sidebar Section */}
