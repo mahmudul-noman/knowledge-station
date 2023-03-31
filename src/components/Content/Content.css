@@ -1,0 +1,19 @@
+.qa-heading {
+    font-weight: 800;
+    font-size: 28px;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.ques {
+    font-size: 20px;
+    font-weight: 700;
+    color: #98240C;
+}
+
+.ans {
+    text-align: justify;
+    font-size: 18px;
+    color: #111;
+    font-weight: 400;
+}
