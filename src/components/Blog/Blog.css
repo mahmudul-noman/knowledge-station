@@ -43,3 +43,27 @@
 .myCard:nth-child(4){
     background-color: red;
 }
+
+
+
+/* Responsive */
+@media screen and (max-width: 576px) {
+    .author-text h3 {
+        font-size: 18px;
+    }
+    .author-text p {
+        font-size: 14px;
+    }
+    .bookmark-info p {
+        font-size: 15px;
+    }
+    .card-title {
+        font-size: 24px;
+    }
+    .hashtag {
+        font-size: 16px;
+    }
+    .mark-btn {
+        font-size: 16px;
+    }    
+}

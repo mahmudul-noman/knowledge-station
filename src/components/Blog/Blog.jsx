@@ -22,7 +22,8 @@ const Blog = ({ blog, handleReadTime, handleBookmarks }) => {
 
                         <div className="bookmark-info d-flex align-items-start">
                             <p>{blog.time} min read</p>
-                            <button onClick={() => { handleBookmarks(blog) }} style={{ cursor: 'pointer', background:'none' }} href="#" className='border-0'><img src="././src/assets/Frame.png" alt="" /></button>
+                            {/* <button onClick={() => { handleBookmarks(blog) }} style={{ cursor: 'pointer', background:'none' }} href="#" className='border-0'><img src="././src/assets/Frame.png" alt="" /></button> */}
+                            <button onClick={() => { handleBookmarks(blog) }} style={{ cursor: 'pointer', background:'none' }} href="#" className='border-0'><img src="Frame.png" alt="" /></button>
                         </div>
                     </div>
                     <h3 className='card-title'>{blog.title}</h3>

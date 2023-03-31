@@ -3,3 +3,20 @@
     font-size: 40px;
     color: #111;
 }
+
+
+/* Responsive */
+@media screen and (max-width: 576px) {
+    .header-logo {
+        font-size: 20px;
+    }
+}
+
+
+
+
+
+/* Responsive */
+@media screen and (max-width: 576px) {
+
+}

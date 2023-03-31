@@ -6,10 +6,10 @@ import './Header.css';
 const Header = () => {
     return (
         // Navbar Section
-        <div>
-            <Navbar>
+        <div className='header'>
+            <Navbar className='pt-4'>
                 <Container>
-                    <Navbar.Brand href="#home"><h2 className='header-logo'>Knowledge <span className='text-success'>Station<sup style={{fontSize: '25px'}} className='text-danger'>7</sup></span></h2></Navbar.Brand>
+                    <Navbar.Brand href="#home"><h2 className='header-logo'>Knowledge <span className='text-success'>Station<sup className='text-danger'>7</sup></span></h2></Navbar.Brand>
                     <Navbar.Toggle />
                     <Navbar.Collapse className="justify-content-end">
                         <Navbar.Text>
