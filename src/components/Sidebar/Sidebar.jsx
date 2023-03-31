@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Sidebar.css';
 
-const Sidebar = ({ readTime, bookmark }) => {
+const Sidebar = ({ readTime, bookmarks }) => {
 
     const [time, setTime] = useState(readTime);
 
@@ -10,21 +10,22 @@ const Sidebar = ({ readTime, bookmark }) => {
         setTime(getReadTimeFromStorage);
     }, [readTime])
 
-
-
-
     return (
         <>
             <div className="top-card card mb-2 p-4 text-primary border-primary">
-                <h3>Spent time on read: {time ? time : 0} Min</h3>
+                <h3>Spent time on read: {time ? time : 0} min</h3>
             </div>
             <div className='card-wrapper shadow text-start p-3'>
                 <div className="bottom-card">
                     <div className="bookmark-blog mb-2 p-2">
-                        <h3>Bookmarked Blogs: 10</h3>
+                        <h3>Bookmarked Blogs: {bookmarks.length}</h3>
                     </div>
-                    <div className="bookmark-info shadow p-4 rounded-2">
-                        <h5>Introducing Zero-Bundle-Size React Server Components</h5>
+                    <div className="bookmark-info">
+                        {
+                            bookmarks.map(bookmark => <h5 className='bookmarks-h5 shadow p-4 rounded-2'
+                                key={bookmark.id}
+                            >{bookmark.title}</h5>)
+                        }
                     </div>
                 </div>
             </div>

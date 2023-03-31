@@ -9,7 +9,7 @@ const Header = () => {
         <div>
             <Navbar>
                 <Container>
-                    <Navbar.Brand href="#home"><h2 className='header-logo'>Knowledge <span className='text-success'>Station</span></h2></Navbar.Brand>
+                    <Navbar.Brand href="#home"><h2 className='header-logo'>Knowledge <span className='text-success'>Station<sup className='text-danger'>7</sup></span></h2></Navbar.Brand>
                     <Navbar.Toggle />
                     <Navbar.Collapse className="justify-content-end">
                         <Navbar.Text>

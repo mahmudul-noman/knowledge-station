@@ -1,10 +1,9 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBookmark } from '@fortawesome/free-solid-svg-icons';
 import './Blog.css';
 
-const Blog = ({ blog, handleReadTime, handleBookmark }) => {
+const Blog = ({ blog, handleReadTime, handleBookmarks }) => {
+
     return (
         <div>
             <Card className='mb-5'>
@@ -21,17 +20,13 @@ const Blog = ({ blog, handleReadTime, handleBookmark }) => {
                             </div>
                         </div>
 
-                        <div className="bookmark-info">
-                            {/* <p>{blog.time} min read &nbsp; <a onClick={() => handleBookmark(blog.bookmark)} href="#"> <FontAwesomeIcon icon={faBookmark} /></a></p> */}
-                            <p>{blog.time} min read &nbsp;
-                            <a style={{cursor: 'pointer'}} href="#"><img src="././src/assets/Frame.png" alt="" /></a>
-                            </p>
+                        <div className="bookmark-info d-flex align-items-start">
+                            <p>{blog.time} min read</p>
+                            <button onClick={() => { handleBookmarks(blog) }} style={{ cursor: 'pointer', background:'none' }} href="#" className='border-0'><img src="././src/assets/Frame.png" alt="" /></button>
                         </div>
                     </div>
                     <h3 className='card-title'>{blog.title}</h3>
-                    <Card.Text>
-                        <p className='hashtag'>#beginners #programming</p>
-                    </Card.Text>
+                    <p className='hashtag'>#beginners &nbsp; #programming</p>
                     <button onClick={() => handleReadTime(blog.time)} className='btn btn-link p-0 m-0 mark-btn'>Mark as read</button>
                 </Card.Body>
             </Card>
