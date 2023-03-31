@@ -28,6 +28,22 @@ const Home = () => {
         }
     };
 
+    // bookmarked blogs
+    // const [bookmarks, setBookmark] = useState([0]);
+    // const handleBookmark = (bookmarks) => {
+    //     const prvBookmark = JSON.parse(localStorage.getItem("bookmark"));
+    //     if (prvBookmark) {
+    //         const sumBookmark = prvBookmark + bookmarks;
+    //         console.log(sumBookmark);
+    //         localStorage.setItem("bookmark", sumBookmark);
+    //         setBookmark(sumBookmark)
+    //     }
+    //     else {
+    //         localStorage.setItem("bookmark", bookmarks);
+    //         setBookmark(bookmarks)
+    //     }
+    // }
+
 
     return (
         <>
@@ -40,14 +56,18 @@ const Home = () => {
                             key={blog.id}
                             blog={blog}
                             handleReadTime={handleReadTime}
+                            // handleBookmark={handleBookmark}
                         ></Blog>)
                     }
                 </div>
 
                 {/* Sidebar Section */}
                 <div className="side-bar col-md-4 text-center">
+
                     <Sidebar
                         readTime={readTime}
+                        // bookmarks={bookmarks}
+                        // blog={blog}
                     ></Sidebar>
                 </div>
             </div>

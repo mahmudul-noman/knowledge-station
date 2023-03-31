@@ -1,0 +1,41 @@
+.author-text h3 {
+    font-weight: 700;
+    font-size: 24px;
+    color: #111;
+}
+
+.author-text p {
+    font-weight: 600;
+    font-size: 16px;
+    color: rgba(17, 17, 17, 0.6);
+}
+
+.card-title {
+    font-weight: 700;
+    font-size: 40px;
+    color: #111;
+    margin-bottom: 16px;
+    margin-top: 35px;
+}
+
+.hashtag {
+    font-weight: 500;
+    font-size: 20px;
+    color: rgba(17, 17, 17, 0.6);
+}
+
+.mark-btn {
+    font-weight: 600;
+    font-size: 20px;
+    color: #6047EC;
+}
+
+.bookmark-info p {
+    font-weight: 500;
+    font-size: 20px;
+    color: rgba(17, 17, 17, 0.6);
+}
+
+.author-bookmark {
+    margin-top: 40px;
+}

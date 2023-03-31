@@ -1,6 +1,7 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
+import './Header.css';
 
 const Header = () => {
     return (
@@ -8,7 +9,7 @@ const Header = () => {
         <div>
             <Navbar>
                 <Container>
-                    <Navbar.Brand href="#home"><h2>Knowledge <span className='text-success'>Station</span></h2></Navbar.Brand>
+                    <Navbar.Brand href="#home"><h2 className='header-logo'>Knowledge <span className='text-success'>Station</span></h2></Navbar.Brand>
                     <Navbar.Toggle />
                     <Navbar.Collapse className="justify-content-end">
                         <Navbar.Text>
