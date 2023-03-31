@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Blog from '../Blog/Blog';
 import Content from '../Content/Content';
 import Sidebar from '../Sidebar/Sidebar';
+import { ToastContainer, toast } from 'react-toastify';
 
 const Home = () => {
 
@@ -31,8 +32,16 @@ const Home = () => {
     // bookmarked count & title section show UI
     const [bookmarks, setBookmarks] = useState([])
     const handleBookmarks = (blog) => {
+        // const newBookmark = [...bookmarks, blog];
+        // setBookmarks(newBookmark);
+
         const newBookmark = [...bookmarks, blog];
-        setBookmarks(newBookmark);
+        if (bookmarks.includes(blog)) {
+            setBookmarks(newBookmark);
+            toast('You Have Already Bookmarked This Blog');
+        } else {
+            setBookmarks(newBookmark);
+        }
     }
 
 
@@ -41,7 +50,7 @@ const Home = () => {
             <div className='main row py-5'>
 
                 {/* Blog Section */}
-                <div className="blog-container col-md-8">
+                <div className="blog-container col-md-8 shadow">
                     {
                         blogs.map(blog => <Blog
                             key={blog.id}
@@ -54,7 +63,6 @@ const Home = () => {
 
                 {/* Sidebar Section */}
                 <div className="side-bar col-md-4 text-center">
-                    
                     <Sidebar
                         readTime={readTime}
                         bookmarks={bookmarks}

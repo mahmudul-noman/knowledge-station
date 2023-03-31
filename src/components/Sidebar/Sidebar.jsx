@@ -12,7 +12,7 @@ const Sidebar = ({ readTime, bookmarks }) => {
 
     return (
         <>
-            <div className="top-card card mb-2 p-4 text-primary border-primary">
+            <div className="top-card card mb-4 p-4 text-primary border-primary">
                 <h3>Spent time on read: {time ? time : 0} min</h3>
             </div>
             <div className='card-wrapper shadow text-start p-3'>

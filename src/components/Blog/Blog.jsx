@@ -6,7 +6,7 @@ const Blog = ({ blog, handleReadTime, handleBookmarks }) => {
 
     return (
         <div>
-            <Card className='mb-5'>
+            <Card className='mb-5 border-0 border-bottom'>
                 <Card.Img variant="top" src={blog.banner} />
                 <Card.Body>
                     <div className="author-bookmark d-flex justify-content-between align-items-center">
