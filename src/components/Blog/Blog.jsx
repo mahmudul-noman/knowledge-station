@@ -3,7 +3,7 @@ import Card from 'react-bootstrap/Card';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBookmark } from '@fortawesome/free-solid-svg-icons';
 
-const Blog = ({ blog }) => {
+const Blog = ({ blog, handleReadTime }) => {
     return (
         <div>
             <Card className='mb-5'>
@@ -29,7 +29,7 @@ const Blog = ({ blog }) => {
                     <Card.Text>
                         <p>#beginners #programming</p>
                     </Card.Text>
-                    <button className='btn btn-link p-0 m-0'>Mark as read</button>
+                    <button onClick={() => handleReadTime(blog.time)} className='btn btn-link p-0 m-0'>Mark as read</button>
                 </Card.Body>
             </Card>
         </div>

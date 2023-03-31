@@ -1,11 +1,22 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Sidebar.css';
 
-const Sidebar = () => {
+const Sidebar = ({ readTime }) => {
+
+    const [time, setTime] = useState(readTime);
+
+    useEffect(() => {
+        const getReadTimeFromStorage = localStorage.getItem("readTime");
+        setTime(getReadTimeFromStorage);
+    }, [readTime])
+
+
+
+
     return (
         <>
             <div className="top-card card mb-2 p-4 text-primary border-primary">
-                <h3>Spent time on read: 50 Min</h3>
+                <h3>Spent time on read: {time ? time : 0} Min</h3>
             </div>
             <div className='card-wrapper shadow text-start p-3'>
                 <div className="bottom-card">
