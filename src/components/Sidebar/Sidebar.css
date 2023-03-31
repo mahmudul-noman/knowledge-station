@@ -1,0 +1,30 @@
+.top-card {
+    background: rgba(96, 71, 236, 0.1);
+    border: 1px solid #6047EC;
+    border-radius: 8px;
+}
+
+.top-card h3 {
+    font-weight: 700;
+    font-size: 24px;
+    color: #6047EC;
+}
+
+.card-wrapper {
+    background: rgba(17, 17, 17, 0.05);
+    border-radius: 8px;
+}
+
+.bookmark-blog h3 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 160%;
+    color: #111111;
+}
+
+.bookmark-info h5 {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 160%;
+    color: #111111;
+}

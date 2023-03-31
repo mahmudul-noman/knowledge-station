@@ -12,7 +12,7 @@ const Blog = ({ blog }) => {
                     <div className="author-bookmark d-flex justify-content-between">
                         <div className="author-info d-flex align-items-center">
                             <div className="author-img me-2">
-                                <img style={{ width: '50px' }} className="rounded-circle" src={blog.author} alt="" />
+                                <img style={{ width: '50px', height: '50px' }} className="rounded-circle" src={blog.author} alt="" />
                             </div>
                             <div className="author-text">
                                 <h3>{blog.name}</h3>
@@ -21,11 +21,11 @@ const Blog = ({ blog }) => {
                         </div>
 
                         <div className="bookmark-info">
-                            <p>{blog.time} min read <a href="#"><FontAwesomeIcon icon={faBookmark} /></a></p>
+                            <p>{blog.time} min read &nbsp; <a href="#"> <FontAwesomeIcon icon={faBookmark} /></a></p>
                             {/* <a href=""><FontAwesomeIcon icon={faBookmark} /></a> */}
                         </div>
                     </div>
-                    <h1 className='card-title'>{blog.title}</h1>
+                    <h3 className='card-title'>{blog.title}</h3>
                     <Card.Text>
                         <p>#beginners #programming</p>
                     </Card.Text>
