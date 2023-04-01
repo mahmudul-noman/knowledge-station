@@ -30,20 +30,17 @@ const Home = () => {
     };
 
     // bookmarked count & title section show UI
-    const [bookmarks, setBookmarks] = useState([])
+    const [bookmarks, setBookmarks] = useState([]);
+    
     const handleBookmarks = (blog) => {
-        // const newBookmark = [...bookmarks, blog];
-        // setBookmarks(newBookmark);
-
         const newBookmark = [...bookmarks, blog];
         if (bookmarks.includes(blog)) {
             setBookmarks(newBookmark);
-            toast('You Have Already Bookmarked This Blog');
+            toast('You Have Already Bookmarked This Blog'); // show toast message if data is already exist.
         } else {
             setBookmarks(newBookmark);
         }
     }
-
 
     return (
         <>

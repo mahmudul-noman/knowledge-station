@@ -2,9 +2,8 @@ import React, { useEffect, useState } from 'react';
 import './Sidebar.css';
 
 const Sidebar = ({ readTime, bookmarks }) => {
-
+    // get spent time from local storage & count total read time in UI
     const [time, setTime] = useState(readTime);
-
     useEffect(() => {
         const getReadTimeFromStorage = localStorage.getItem("readTime");
         setTime(getReadTimeFromStorage);
